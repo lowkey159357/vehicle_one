@@ -29,15 +29,15 @@ from datasets import dataset_utils
 
 slim = tf.contrib.slim
 
-_FILE_PATTERN = 'quiz_%s_*.tfrecord'
+_FILE_PATTERN = 'pj_vehicle_%s_*.tfrecord'
 
-SPLITS_TO_SIZES = {'train': 50000, 'validation': 10000}
+SPLITS_TO_SIZES = {'train': 43971, 'validation': 4885}
 
-_NUM_CLASSES = 200
+_NUM_CLASSES = 764
 
 _ITEMS_TO_DESCRIPTIONS = {
     'image': 'A color image of varying size.',
-    'label': 'A single integer between 0 and 99',
+    'label': 'A single integer between 0 and _NUM_CLASSES',
 }
 
 
