@@ -46,6 +46,7 @@ if __name__ == '__main__':
     else:
         ckpt = ''
     for i in range(60):
+        print('#######################    epoch:%d    ####################'% (epoch + 1) )
         steps = int(step_per_epoch * (i + 1))
         # train 1 epoch
         print('################    train    ################')
