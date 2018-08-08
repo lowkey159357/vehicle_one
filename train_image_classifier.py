@@ -456,6 +456,8 @@ def main(_):
       images, labels = batch_queue.dequeue()
       logits, end_points = network_fn(images)
 
+      print(end_points)
+      print(logits)
       #############################
       # Specify the loss function #
       #############################
@@ -468,6 +470,11 @@ def main(_):
           logits, labels, label_smoothing=FLAGS.label_smoothing, weights=1.0)
       return end_points
 
+    
+    print('******************************************************')
+    telu=clone_fn(batch_queue)
+    print(telu)
+    print('******************************************************')
     # Gather initial summaries.
     summaries = set(tf.get_collection(tf.GraphKeys.SUMMARIES))
 
